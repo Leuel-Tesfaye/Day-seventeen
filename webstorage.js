@@ -25,3 +25,26 @@ console.log(localStorage)
 //storing a number in a local storage 
 localStorage.setItem('age', 24)
 console.log(localStorage)
+
+// if we are storing an array in local storage we need to stringify the object first
+
+const skills = ['html', 'css' ,'js','react']
+const skillsJson = JSON.stringify(skills)
+localStorage.setItem('skills', skillsJson)
+console.log(localStorage)
+
+// storing an object in local storage : must be stringify 
+
+const users = {
+    firstName: 'prince',
+    lastName: 'Hope',
+    age : '24'
+}
+const userText = JSON.stringify(users)
+localStorage.setItem('users', userText)
+console.log(localStorage)
+
+// getting item form local storage : use getItem () and key 
+
+const skill = localStorage.getItem('skills')
+console.log(skill)
